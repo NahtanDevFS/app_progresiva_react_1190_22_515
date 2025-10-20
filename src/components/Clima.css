@@ -1,0 +1,184 @@
+.clima-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background: #2196f3;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.city-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.city-input:focus {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-button {
+  padding: 12px 24px;
+  background: white;
+  color: #2196f3;
+  border: 2px solid white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search-button:hover {
+  background: transparent;
+  color: white;
+}
+
+.search-button:active {
+  transform: scale(0.98);
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  animation: pulse 1.5s infinite;
+}
+
+.error {
+  text-align: center;
+  background: rgba(244, 67, 54, 0.9);
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid white;
+}
+
+.clima-info {
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+
+.clima-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.temperature {
+  font-size: 72px;
+  font-weight: 300;
+  margin: 20px 0;
+  line-height: 1;
+}
+
+.description {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.detalles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detalles-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.detalles-item span:not(.icon):not(.valor) {
+  font-size: 11px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.detalles-item .valor {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.temp-info {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.temp-info p {
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .detalles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-container {
+    margin: 0;
+    padding: 30px 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .temperature {
+    font-size: 60px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .detalles {
+    gap: 20px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}

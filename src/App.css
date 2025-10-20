@@ -1,0 +1,14 @@
+.App {
+  min-height: 100vh;
+  background: #bbeeff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
