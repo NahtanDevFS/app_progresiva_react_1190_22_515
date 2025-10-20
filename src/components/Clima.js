@@ -75,8 +75,8 @@ function Clima() {
           <div className="temperature">{Math.round(clima.main.temp)} °C</div>
           <p className="description">{clima.weather[0].description}</p>
           <div className="temp-info">
-            <p>Temp max: {Math.round(clima.main.temp_max)} °C</p>
-            <p>Temp min: {Math.round(clima.main.temp_min)} °C</p>
+            <p>T max: {Math.round(clima.main.temp_max)} °C</p>
+            <p>T min: {Math.round(clima.main.temp_min)} °C</p>
           </div>
           <div className="detalles">
             <div className="detalles-item">
