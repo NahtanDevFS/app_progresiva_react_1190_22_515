@@ -3,7 +3,7 @@ import "./Clima.css";
 
 function Clima() {
   const [clima, setClima] = useState(null);
-  const [ciudad, setCiudad] = useState("Guatemala");
+  const [ciudad, setCiudad] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -40,10 +40,6 @@ function Clima() {
     }
   };
 
-  useEffect(() => {
-    fetchClima(ciudad);
-  }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (ciudad.trim()) {
@@ -60,7 +56,7 @@ function Clima() {
           type="text"
           value={ciudad}
           onChange={(e) => setCiudad(e.target.value)}
-          placeholder="Ingresa una ciudad"
+          placeholder="Ingresa una ciudad (Guatemala por ejemplo)"
           className="city-input"
         />
         <button type="submit" className="search-button">
