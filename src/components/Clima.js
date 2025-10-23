@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Clima.css";
 
 function Clima() {
@@ -74,11 +74,19 @@ function Clima() {
           </h2>
           <div className="temperature">{Math.round(clima.main.temp)} °C</div>
           <p className="description">{clima.weather[0].description}</p>
-          <div className="temp-info">
-            <p>T max: {Math.round(clima.main.temp_max)} °C</p>
-            <p>T min: {Math.round(clima.main.temp_min)} °C</p>
-          </div>
           <div className="detalles">
+            <div className="detalles-item">
+              <span>Temp max</span>
+              <span className="valor">
+                {Math.round(clima.main.temp_max)} °C
+              </span>
+            </div>
+            <div className="detalles-item">
+              <span>Temp min</span>
+              <span className="valor">
+                {Math.round(clima.main.temp_min)} °C
+              </span>
+            </div>
             <div className="detalles-item">
               <span>Humedad</span>
               <span className="valor">{clima.main.humidity}%</span>
