@@ -96,7 +96,6 @@ form {
 
 .description {
   font-size: 20px;
-  text-transform: capitalize;
   margin-bottom: 30px;
   font-weight: 400;
   opacity: 0.95;
@@ -122,7 +121,6 @@ form {
 .detalles-item span:not(.icon):not(.valor) {
   font-size: 11px;
   opacity: 0.8;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
 }
