@@ -56,7 +56,7 @@ function Clima() {
           type="text"
           value={ciudad}
           onChange={(e) => setCiudad(e.target.value)}
-          placeholder="Ingresa una ciudad (Guatemala por ejemplo)"
+          placeholder="Una ciudad como Zacapa, Guatemala..."
           className="city-input"
         />
         <button type="submit" className="search-button">
